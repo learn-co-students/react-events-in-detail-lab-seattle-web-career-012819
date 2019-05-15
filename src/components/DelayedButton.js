@@ -8,8 +8,7 @@ class DelayedButton extends Component {
     }
 
     handleClick = (event) => {
-
-        //commented out the test that was checking for the event. It says that the event is not being passed to the callback function but IS passing the callback function correctly.
+        event.persist()
         setTimeout(() => {
             this.props.onDelayedClick(event)
         }, this.props.delay)
